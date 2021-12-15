@@ -1,12 +1,12 @@
 FROM openjdk:8
 
-RUN wget -O kafka.tgz https://downloads.apache.org/kafka/2.7.0/kafka_2.13-2.7.0.tgz
+RUN wget -O kafka.tgz https://archive.apache.org/dist/kafka/2.8.1/kafka_2.13-2.8.1.tgz
 
 RUN tar -xvzf kafka.tgz -C /opt
 
 RUN rm -f kafka.tgz
 
-ENV KAFKA_HOME="/opt/kafka_2.13-2.7.0"
+ENV KAFKA_HOME="/opt/kafka_2.13-2.8.1"
 
 ENV PATH="${KAFKA_HOME}/bin:${PATH}"
 
